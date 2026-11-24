@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDCAT CRACK Mock Test Portal - 2027</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}body{margin:0;background:#f3f0ff}
+.top{background:#5b3df5;color:#fff;text-align:center;padding:30px 15px 40px;border-radius:0 0 25px 25px}
+.top h1{margin:0;font-size:32px}.pill{display:inline-block;background:#ffffff33;color:#fff;padding:8px 18px;border-radius:20px;margin:4px}
+.pill.active{background:#fff;color:#5b3df5;font-weight:bold}
+.card{max-width:800px;margin:-15px auto 20px;background:#fff;padding:20px;border-radius:20px;box-shadow:0 0 15px #ddd}
+.center{text-align:center}.sub{color:#5b3df5;font-weight:bold}
+.btn-green{background:#16a34a;color:#fff;border:none;padding:12px 20px;border-radius:10px;font-weight:bold;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-dark{background:#1f2937;color:#fff;padding:12px 20px;border-radius:10px;font-weight:bold;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+.notice{border:2px solid #fbbf24;border-radius:12px;padding:15px;margin-top:15px}.red{color:#dc2626;font-weight:bold}
+.testcard{background:#eef2ff;padding:18px;border-radius:15px;margin-top:15px}
+.testcard2{background:#fef3c7;padding:18px;border-radius:15px;margin-top:15px}
+.start{background:#5b3df5;color:#fff;border:none;padding:12px 22px;border-radius:20px;font-weight:bold;font-size:16px;cursor:pointer;margin-top:10px}
+.start2{background:#d97706;color:#fff;border:none;padding:12px 22px;border-radius:20px;font-weight:bold;font-size:16px;cursor:pointer;margin-top:10px}
+input{width:100%;padding:13px;border:2px solid #5b3df5;border-radius:10px;font-size:16px;margin:8px 0}
+.qbox{background:#EFF6FF;padding:15px;border-radius:12px;border-left:5px solid #5b3df5;font-size:18px;margin:15px 0}
+.opt{display:block;background:#fff;padding:11px;margin:8px 0;border:2px solid #ddd;border-radius:8px;cursor:pointer}
+#timer{position:fixed;top:10px;right:10px;background:#dc2626;color:#fff;padding:10px 15px;border-radius:20px;font-weight:bold;z-index:99}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div id="timer" class="hidden">Time: 140:00</div>
+<div id="portal">
+<div class="top"><h1>MDCAT CRACK Mock Test Portal</h1><p>MDCAT CRACK 2027<br>Prepare smarter. Practice better.</p><div><span class="pill">English</span><span class="pill">Biology</span><span class="pill">Chemistry</span><br><span class="pill">Physics</span><span class="pill active">Mock Test</span></div></div>
+<div class="card">
+<div class="center"><h2>SAJID SIR</h2><div class="sub">Mock Test Coordinator</div><br>
+<a class="btn-green" href="https://whatsapp.com/channel/0029VbBp48a60eBp3wccg83Q" target="_blank">WhatsApp Channel</a>
+<a class="btn-dark" href="https://wa.me/923070267161" target="_blank">Contact Us - 03070267161</a>
+<p>Contact: <b>03070267161</b> | Sir Sajid</p></div>
+<div class="notice"><h3>IMPORTANT NOTICE - Registration Required</h3><p>To access all Mock Tests, students must complete Registration Form first.</p><p>Team: Sir Sajid | Sir Shaban | Sir Bilal | Sir Fahad</p><p class="red">Note: Sir Ki Ijazat Ke Baghair Dobara Test Nahi Hoga.</p></div>
+<div class="testcard"><h3>MDCAT Test - 160 MCQs Test (1) CODE REQUIRED</h3><p>160 MCQs | 140 Minutes<br>Code Required - Code Sir Sajid Se Lo - 03070267161</p><button type="button" class="start" onclick="showReg(1)">Start Test 1</button></div>
+<div class="testcard2"><h3>MDCAT Test - 180 MCQs Test (2) - NEW</h3><p>Biology 81 + Chemistry 45 + Physics 45 + English 9 = 180 MCQs<br>180 MCQs | 150 Minutes<br>No Code Required - Direct Open Hoga</p><button type="button" class="start2" onclick="showReg(2)">Start Test 2</button></div>
+</div>
+</div>
+
+<div class="card hidden" id="regBox"><h2 class="center" id="regTitle">Registration</h2><input id="stdName" placeholder="Apna Poora Naam Likho..."><input id="stdCity" placeholder="Apna City Likho... e.g. Ghotki"><input id="stdPhone" placeholder="WhatsApp Number..."><button type="button" class="btn-green" style="width:100%" onclick="startTest()">REGISTRATION KARO AUR TEST START KARO</button><p class="center">Contact: <b>03070267161</b></p></div>
+<div class="card hidden" id="quizBox"><h3 id="qTitle"></h3><div id="qArea"></div><button type="button" class="btn-green" style="width:100%" onclick="nextQ()">NEXT QUESTION</button><p id="progress" class="center"></p></div>
+<div class="card hidden" id="resultBox" style="text-align:center"><h2 style="color:#16a34a">Test Complete!</h2><h3 id="resName"></h3><p style="font-size:18px">Tumhara Result <b>Sir Sajid</b> Ko Bhej Diya Gaya Hai.</p><p>Result Sir Check Kar Ke Batayen Gay.</p><p class="red">Apna Score Khud Check Nahi Kar Saktay.</p><br><a class="btn-green" href="https://whatsapp.com/channel/0029VbBp48a60eBp3wccg83Q" target="_blank">WhatsApp Channel Join Karo</a><br><br><a class="btn-dark" href="https://wa.me/923070267161" target="_blank">Contact Sir Sajid - 03070267161</a></div>
+
+<script>
+let test1=[];
+let w1=[["cat",1],["dog",1],["pen",1],["book",1],["sun",1],["moon",1],["star",1],["fish",1],["tree",1],["ball",1],["apple",2],["water",2],["table",2],["teacher",2],["student",2],["happy",2],["doctor",2],["mother",2],["father",2],["brother",2],["sister",2],["winter",2],["summer",2],["garden",2],["window",2],["pencil",2],["school",1],["river",2],["market",2],["village",2],["computer",3],["beautiful",3],["family",3],["hospital",3],["university",5],["education",4],["important",3],["different",3],["wonderful",3],["morning",2]];
+w1.forEach((w,i)=>{let c=w[1];let opts=[1,2,3,4,5].filter(n=>n!==c).slice(0,3);let all=[c,...opts].sort(()=>Math.random()-0.5);test1.push({q:`Q${i+1}. [English] How many syllables in "${w[0].toUpperCase()}"?`,o:all.map(n=>n+" Syllable"+(n>1?"s":"")),a:all.indexOf(c)});});
+let bio1=[["Powerhouse of cell is?","Mitochondria","Nucleus","Ribosome","Golgi",0],["Photosynthesis occurs in?","Chloroplast","Mitochondria","Nucleus","Vacuole",0],["DNA is made of?","Nucleotides","Amino acids","Glucose","Fatty acids",0],["Universal blood donor is?","O Negative","AB Positive","A Positive","B Negative",0],["Functional unit of kidney is?","Nephron","Neuron","Alveoli","Glomerulus",0],["Heart has how many chambers?","4","2","3","5",0],["Oxygen is carried by?","RBC","WBC","Platelets","Plasma",0],["Insulin is secreted by?","Pancreas","Liver","Kidney","Thyroid",0],["Photosynthesis produces?","Oxygen","Carbon Dioxide","Nitrogen","Hydrogen",0],["Largest organ of human body?","Skin","Liver","Heart","Lung",0]];
+bio1.forEach(b=>test1.push({q:`Q${test1.length+1}. [Biology] ${b[0]}`,o:[b[1],b[2],b[3],b[4]],a:b[5]}));
+let chem1=[["Atomic number of Carbon?","6","8","12","14",0],["pH of neutral solution?","7","0","14","1",0],["Water formula?","H2O","CO2","O2","NaCl",0],["Most abundant gas in air?","Nitrogen","Oxygen","CO2","Hydrogen",0],["NaCl is commonly called?","Table Salt","Sugar","Baking Soda","Vinegar",0],["Atomic number of Oxygen?","8","6","16","10",0],["Acid turns blue litmus?","Red","Blue","Green","Yellow",0],["Symbol of Gold?","Au","Ag","Fe","Cu",0],["Chemical formula of Glucose?","C6H12O6","CO2","H2O","NaCl",0],["Strongest acid?","Sulphuric Acid","Acetic Acid","Citric Acid","Hydrochloric Acid",0]];
+chem1.forEach(b=>test1.push({q:`Q${test1.length+1}. [Chemistry] ${b[0]}`,o:[b[1],b[2],b[3],b[4]],a:b[5]}));
+let phy1=[["Unit of Force?","Newton","Joule","Watt","Volt",0],["Speed of Light?","3x10^8 m/s","3x10^6 m/s","1x10^8 m/s","5x10^8 m/s",0],["Unit of Power?","Watt","Joule","Newton","Ohm",0],["Gravity on Earth?","9.8 m/s2","5 m/s2","10.5 m/s2","1.6 m/s2",0],["Unit of Current?","Ampere","Volt","Ohm","Watt",0],["Energy stored in battery is?","Chemical","Kinetic","Heat","Light",0],["Which is vector quantity?","Velocity","Speed","Distance","Mass",0],["Frequency unit?","Hertz","Newton","Joule","Watt",0],["Work = ?","Force x Distance","Mass x Velocity","Force / Distance","Mass x Gravity",0],["Ohm Law V = ?","IR","I/R","R/I","I+R",0]];
+phy1.forEach(b=>test1.push({q:`Q${test1.length+1}. [Physics] ${b[0]}`,o:[b[1],b[2],b[3],b[4]],a:b[5]}));
+let ex1=[["evening",3],["animal",3],["banana",3],["tomato",3],["potato",3],["chocolate",3],["camera",3],["memory",3],["history",3],["geography",4],["biology",4],["chemistry",3],["physics",2],["english",2],["mathematics",4],["science",1],["question",2],["answer",2],["language",2],["city",2]];
+while(test1.length<160){let w=ex1[test1.length%ex1.length];let c=w[1];let opts=[1,2,3,4,5].filter(n=>n!==c).slice(0,3);let all=[c,...opts].sort(()=>Math.random()-0.5);test1.push({q:`Q${test1.length+1}. [English] How many syllables in "${w[0].toUpperCase()}"?`,o:all.map(n=>n+" Syllable"+(n>1?"s":"")),a:all.indexOf(c)});}
+test1=test1.slice(0,160);
+
+let test2Raw=[
+["Which statement about prions is CORRECT according to STB?","They contain DNA","They are proteinaceous infectious particles without nucleic acid","They contain RNA","They are viruses",1],
+["A bacteriophage with dsDNA replicates by using host machinery. Which step is absent in lytic cycle?","Attachment","Integration into host genome","Assembly","Lysis",1],
+["HIV is a retrovirus. Which enzyme is essential for its replication?","DNA polymerase","Reverse transcriptase","RNA polymerase","Ligase",1],
+["Which enzyme remains active at low pH in stomach and shows denaturation at pH 8?","Trypsin","Pepsin","Amylase","Lipase",1],
+["In non-competitive inhibition, inhibitor binds to:","Active site","Allosteric site, changes shape of active site","Substrate","Product",1],
+["If Km is high, affinity of enzyme for substrate is:","High","Low","Zero","Unchanged",1],
+["Which organelle is involved in detoxification in liver cells and synthesis of lipids?","RER","SER","Golgi","Lysosome",1],
+["Which structure is absent in prokaryotic cell but present in eukaryotic?","Ribosome","Cell membrane","Membrane-bound nucleus","Cytoplasm",2],
+["Fluid mosaic model: Proteins are:","Fixed","Floating in lipid bilayer like icebergs","Only outside","Only inside",1],
+["Which molecule can pass directly through lipid bilayer?","Glucose","Na+","O2","Amino acid",2],
+["Which carbohydrate is NOT a reducing sugar?","Glucose","Fructose","Sucrose","Maltose",2],
+["Tertiary structure of protein is stabilized by all EXCEPT:","Hydrogen bond","Disulphide bond","Peptide bond","Hydrophobic interaction",2],
+["In DNA, if adenine is 20%, guanine will be:","20%","30%","40%","10%",1],
+["Which base is present in RNA but NOT in DNA?","Adenine","Guanine","Uracil","Cytosine",2],
+["Light dependent reactions produce:","ATP and NADPH","Glucose","CO2","Only ATP",0],
+["In C4 plants, first stable product of CO2 fixation is:","3-PGA","Oxaloacetate","RuBP","Glucose",1],
+["If PS-II is blocked, which will stop first?","Photolysis of water","Calvin cycle directly","Glycolysis","Krebs cycle",0],
+["Net gain of ATP in aerobic respiration per glucose in eukaryotes (STB) is approximately:","2","36-38","8","4",1],
+["Fermentation occurs because:","No oxygen to accept electrons, NAD+ regenerated","No glucose","No mitochondria","No enzymes",0],
+["Whittaker placed fungi in separate kingdom because:","They are photosynthetic","They are heterotrophic, absorptive, chitinous wall","They are prokaryotic","They are motile",1],
+["Which is NOT a characteristic of Kingdom Monera?","Prokaryotic","Peptidoglycan wall","Membrane-bound nucleus","Binary fission",2],
+["Which organism shows both plant and animal like characters?","Euglena","Amoeba","Paramecium","Yeast",0],
+["Analogous organs show:","Divergent evolution","Convergent evolution","Same origin","Same structure",1],
+["Hardy-Weinberg principle is applicable when:","No mutation, no selection, large population","Mutation occurs","Small population","Migration occurs",0],
+["Which is vestigial organ in humans?","Appendix","Liver","Heart","Lung",0],
+["In human heart, blood from right ventricle goes to:","Lungs via pulmonary artery","Body via aorta","Left atrium","Right atrium",0],
+["SA node is located in:","Right atrium near opening of superior vena cava","Left atrium","Ventricle","Septum",0],
+["During ventricular systole, AV valves are:","Open","Closed","Half open","Absent",1],
+["Which blood vessel has highest blood pressure?","Aorta","Vein","Capillary","Vena cava",0],
+["Erythroblastosis fetalis occurs when:","Rh- mother, Rh+ fetus, second pregnancy","Rh+ mother, Rh- fetus","AB mother, O fetus","O mother, AB fetus",0],
+["Which hormone increases blood glucose AND is antagonistic to insulin?","Glucagon + Adrenaline","Insulin","ADH","Oxytocin",0],
+["In diabetes insipidus, deficiency is of:","Insulin","ADH","Glucagon","Thyroxine",1],
+["Osmoregulation in freshwater fish: Kidneys excrete:","Large amount of dilute urine","Small amount of concentrated urine","No urine","Urea only",0],
+["Which part of nephron is impermeable to water?","Ascending limb of Henle","Descending limb","PCT","DCT",0],
+["Counter-current mechanism is due to:","Loop of Henle + Vasa recta","Glomerulus","PCT","Collecting duct only",0],
+["Resting membrane potential is maintained mainly by:","Na+/K+ pump","Ca++ pump","Cl- channel","Glucose pump",0],
+["At synapse, Ca++ influx causes:","Release of neurotransmitter","Reuptake","Inhibition","Generation of AP",0],
+["Which neurotransmitter is inhibitory in CNS?","GABA","Acetylcholine","Dopamine","Glutamate",0],
+["Auxin is synthesized mainly in:","Shoot apex","Root tip only","Leaf","Seed",0],
+["Phototropism is due to:","Unequal distribution of auxin","Equal auxin","Gibberellin","Cytokinin",0],
+["Which plant hormone breaks seed dormancy?","Gibberellin","ABA","Ethylene","Auxin",0],
+["In C3 plants, stomata close at high temperature to prevent:","Water loss, but reduces photosynthesis","CO2 loss","O2 loss","Light",0],
+["Vital capacity is:","IRV+TV+ERV","TV only","RV+TV","Total lung capacity",0],
+["Haemoglobin dissociation curve shifts right when:","pCO2 increases, pH decreases","pCO2 decreases","Temperature decreases","pH increases",0],
+["Which is correct for chloride shift?","Cl- enters RBC in exchange of HCO3-","Cl- leaves RBC","Na+ enters","K+ leaves",0],
+["Which valve prevents backflow from left ventricle to left atrium?","Bicuspid / Mitral","Tricuspid","Semilunar","Pulmonary",0],
+["Cardiac output = Stroke volume x:","Heart rate","Blood pressure","Respiratory rate","Vital capacity",0],
+["Which WBC increases in allergy and parasitic infection?","Eosinophil","Neutrophil","Basophil","Monocyte",0],
+["Sliding filament theory: During contraction, which band remains unchanged?","A-band","I-band","H-zone","Sarcomere length",0],
+["ATP is required for:","Detachment of myosin head from actin","Only attachment","Only power stroke","No role",0],
+["Which joint is ball and socket?","Shoulder","Knee","Elbow","Ankle",0],
+["Osteoporosis is due to deficiency of:","Calcium + Vitamin D + Estrogen","Iron","Vitamin C","Vitamin B12",0],
+["Spermatogenesis occurs in:","Seminiferous tubules","Epididymis","Vas deferens","Prostate",0],
+["Acrosome contains enzymes for:","Penetration of egg","Motility","Nutrition","Division",0],
+["Corpus luteum secretes:","Progesterone","Estrogen only","FSH","LH",0],
+["Ovulation is triggered by surge of:","LH","FSH","Progesterone","Estrogen",0],
+["Implantation occurs on day:","6-7 after fertilization","1","14","28",0],
+["In test cross, heterozygous tall (Tt) x dwarf (tt) gives ratio:","1:1","3:1","1:2:1","9:3:3:1",0],
+["Dihybrid cross phenotypic ratio in F2 is:","9:3:3:1","3:1","1:1","1:2:1",0],
+["Colour blindness is:","X-linked recessive","Autosomal dominant","Y-linked","Autosomal recessive",0],
+["A man with haemophilia marries normal woman. Their sons will be:","All normal if woman is not carrier","All haemophilic","50% haemophilic","All carrier",0],
+["DNA replication is:","Semi-conservative","Conservative","Dispersive","Non-conservative",0],
+["Okazaki fragments are formed on:","Lagging strand","Leading strand","Both","None",0],
+["Central dogma is:","DNA -> RNA -> Protein","RNA -> DNA -> Protein","Protein -> RNA -> DNA","DNA -> Protein -> RNA",0],
+["Mutation in which codon will cause sickle cell anemia?","GAG to GTG (Glutamic acid to Valine)","GAG to GAA","GTG to GAG","AAA to AAG",0],
+["Which is NOT a stop codon?","UAA","UAG","UGA","AUG",3],
+["Recombinant DNA technology uses vector commonly:","Plasmid","Ribosome","Mitochondria","Golgi",0],
+["Restriction enzymes cut DNA at:","Palindromic sequences","Random sites","Only AT","Only GC",0],
+["PCR requires:","Taq polymerase, primers, dNTPs, template","Ligase only","Reverse transcriptase only","Restriction enzyme only",0],
+["Bt cotton is resistant to:","Bollworm","Virus","Fungus","Drought",0],
+["Gene therapy for SCID targets:","Bone marrow cells","Brain cells","Skin cells","Liver only",0],
+["Which vitamin deficiency causes night blindness?","Vitamin A","Vitamin D","Vitamin K","Vitamin C",0],
+["Which disease is due to deficiency of iodine?","Goitre","Rickets","Anemia","Scurvy",0],
+["Which is a viral disease?","Hepatitis","Tuberculosis","Cholera","Malaria",0],
+["Malaria is caused by:","Plasmodium, transmitted by Anopheles","Bacteria","Virus","Fungus",0],
+["Which is the site of photosynthesis in prokaryotic cyanobacteria?","Thylakoid in cytoplasm","Chloroplast","Mitochondria","Nucleus",0],
+["If a cell is placed in hypertonic solution, it will:","Shrink (plasmolysis)","Swell","Burst","No change",0],
+["Which process requires energy and moves against concentration gradient?","Active transport","Diffusion","Osmosis","Facilitated diffusion",0],
+["In human, exchange of gases in lungs is by:","Diffusion","Active transport","Osmosis","Bulk flow",0],
+["Which hormone is called emergency hormone?","Adrenaline","Insulin","Thyroxine","ADH",0],
+["Which of following is TRUE about enzymes?","They lower activation energy without being consumed","They are consumed","They increase activation energy","They change equilibrium",0],
+["Which has maximum number of atoms?","1 mole of H2","1 mole of O2","1 mole of CH4","1 mole of H2O",2],
+["Empirical formula of glucose is:","CH2O","C6H12O6","C2H4O2","CHO",0],
+["Which quantum number determines shape of orbital?","Azimuthal (l)","Principal (n)","Magnetic (m)","Spin (s)",0],
+["Maximum electrons in n=3 shell are:","18","8","32","2",0],
+["Which ion has same electronic configuration as Argon?","Ca2+","Na+","Mg2+","Al3+",0],
+["According to Boyles law, if pressure is doubled at constant T, volume becomes:","Half","Double","Same","Four times",0],
+["Real gas deviates most from ideal at:","High P, low T","Low P, high T","Low P, low T","High P, high T",0],
+["Which has strongest hydrogen bonding?","HF","H2O","NH3","HCl",0],
+["Le Chatelier: For N2 + 3H2 = 2NH3 + Heat, increase in temperature will:","Shift left, decrease NH3","Shift right","No effect","Increase K",0],
+["pH of 0.01 M HCl is:","2","1","12","10",0],
+["If Ka increases, acid becomes:","Stronger","Weaker","Neutral","No change",0],
+["Activation energy is lowered by:","Catalyst","Increasing temperature","Increasing concentration","Decreasing pressure",0],
+["For exothermic reaction, H is:","Negative","Positive","Zero","Infinite",0],
+["In galvanic cell, electrons flow from:","Anode to Cathode","Cathode to Anode","Salt bridge to anode","Cathode to salt bridge",0],
+["Which is strongest oxidizing agent?","F2","Cl2","Br2","I2",0],
+["Bond angle in CH4 is:","109.5","120","180","107",0],
+["Which molecule is non-polar despite polar bonds?","CO2","H2O","NH3","HCl",0],
+["Which element has highest electronegativity?","F","O","Cl","N",0],
+["Ionization energy increases across period because:","Nuclear charge increases, size decreases","Size increases","Shielding increases","Nuclear charge decreases",0],
+["Which is most acidic?","Phenol","Ethanol","Water","Methane",0],
+["Markovnikov addition of HBr to propene gives:","2-bromopropane","1-bromopropane","2-propanol","Propane",0],
+["Which gives positive iodoform test?","Ethanol + Methyl ketone","Methanol","Formaldehyde","Acetic acid",0],
+["Tollens test is positive for:","Aldehyde","Ketone","Alcohol","Carboxylic acid",0],
+["Which is NOT a functional group isomer of aldehyde?","Ketone","Alcohol","Enol","Carboxylic acid",1],
+["Saponification of ester gives:","Alcohol + Soap (sodium carboxylate)","Acid + Alcohol","Alkane","Alkene",0],
+["Which amino acid is essential?","Lysine","Alanine","Glycine","Serine",0],
+["Denaturation of protein destroys:","Secondary, tertiary, quaternary, NOT primary","Primary","Peptide bond","Amino acids",0],
+["Which is a disaccharide?","Sucrose","Glucose","Fructose","Starch",0],
+["Which polymer is natural?","Cellulose","Nylon","PVC","Teflon",0],
+["Contact process catalyst is:","V2O5","Fe","Pt","Ni",0],
+["Haber process conditions are:","450C, 200 atm, Fe catalyst","25C, 1 atm","1000C","0C",0],
+["Which gas is used in Ostwald process to make HNO3?","NH3","SO2","CO2","N2",0],
+["Molarity of solution with 4g NaOH in 500 mL is:","0.2 M","0.4 M","0.1 M","1 M",0],
+["Which has lowest pH?","0.1 M HCl","0.1 M CH3COOH","0.1 M NaOH","Pure water",0],
+["In SN1, rate depends on:","Only alkyl halide concentration","Only nucleophile","Both","Neither",0],
+["Which alkyl halide is most reactive in SN1?","Tertiary","Primary","Secondary","Methyl",0],
+["Elimination of alkyl halide with alcoholic KOH gives:","Alkene","Alcohol","Alkane","Ether",0],
+["Which is aromatic?","Benzene","Cyclohexane","Hexane","Ethene",0],
+["Benzene undergoes:","Electrophilic substitution","Addition","Elimination","Free radical substitution mainly",0],
+["Which is strongest acid?","Trichloroacetic acid","Acetic acid","Chloroacetic acid","Formic acid",0],
+["Which compound shows geometrical isomerism?","2-butene","1-butene","Propene","Ethene",0],
+["Hybridization of carbon in CO2 is:","sp","sp2","sp3","sp3d",0],
+["Which has highest boiling point?","H2O due to H-bonding","H2S","HCl","NH3",0],
+["Reaction is spontaneous when G is:","Negative","Positive","Zero","Infinite",0],
+["Buffer solution resists change in:","pH","Temperature","Volume","Pressure",0],
+["Two vectors of magnitude 3N and 4N are perpendicular. Resultant is:","5N","7N","1N","12N",0],
+["If A x B = 0 and A.B not 0, vectors are:","Parallel","Perpendicular","Anti-parallel","Zero",0],
+["A car accelerates from 0 to 20 m/s in 5s. Acceleration is:","4 m/s2","2 m/s2","5 m/s2","20 m/s2",0],
+["Projectile at 45 has maximum:","Range","Height","Time","Velocity",0],
+["In projectile, horizontal component of velocity:","Remains constant (no air resistance)","Increases","Decreases","Becomes zero",0],
+["If force is doubled and mass is halved, acceleration becomes:","4 times","2 times","Same","Half",0],
+["Work done by centripetal force is:","Zero","Positive","Negative","Maximum",0],
+["Power is:","Work / time","Force x time","Energy x time","Mass x velocity",0],
+["A body of mass 2kg moving with 3 m/s has K.E:","9 J","6 J","18 J","3 J",0],
+["In elastic collision, conserved are:","Both momentum and K.E","Only momentum","Only K.E","Neither",0],
+["Moment of inertia depends on:","Mass distribution about axis","Only mass","Only velocity","Only radius",0],
+["Angular momentum is conserved when:","No external torque","No external force","No friction","No gravity",0],
+["Escape velocity does NOT depend on:","Mass of escaping body","Mass of planet","Radius of planet","G",0],
+["Pressure at depth h in liquid is:","rho g h","rho g / h","rho h","g h",0],
+["Terminal velocity increases with:","Radius of drop","Viscosity","Density of medium","Decrease in radius",0],
+["Frequency of simple pendulum depends on:","Length and g","Mass","Amplitude (small)","Bob material",0],
+["If length of pendulum is made 4 times, time period becomes:","2 times","4 times","Half","Same",0],
+["In stationary wave, nodes are points of:","Zero displacement","Maximum displacement","Maximum velocity","Maximum pressure",0],
+["Speed of sound increases with:","Temperature","Pressure (at constant T)","Density","Humidity decreases",0],
+["First law: System absorbs 100J and does 40J work, U is:","60J","140J","-60J","40J",0],
+["In isothermal process, temperature:","Constant","Increases","Decreases","Zero",0],
+["Efficiency of Carnot engine depends on:","Temperatures of source and sink","Working substance","Volume","Pressure",0],
+["Electric field inside a charged hollow conductor is:","Zero","Maximum","Constant non-zero","Infinite",0],
+["If distance between two charges is halved, force becomes:","4 times","2 times","Half","1/4",0],
+["Capacitance increases when dielectric is inserted because:","Electric field decreases, C increases","Charge decreases","Distance increases","Area decreases",0],
+["Drift velocity is:","Very small, order of mm/s","Speed of light","Speed of sound","Very high",0],
+["If length of wire is doubled, resistance becomes:","Double","Half","4 times","Same",0],
+["Kirchhoffs first law is based on:","Conservation of charge","Conservation of energy","Conservation of momentum","Conservation of mass",0],
+["Magnetic force on moving charge is maximum when:","Velocity perpendicular to B","Velocity parallel to B","Charge at rest","B = 0",0],
+["A charged particle moves in circle in magnetic field. Radius depends on:","Momentum / (qB)","qB / momentum","Charge only","B only",0],
+["Transformer works on:","AC only","DC only","Both","Neither",0],
+["In step-up transformer, number of turns in secondary is:","Greater than primary","Less","Equal","Zero",0],
+["Eddy currents are reduced by:","Laminated core","Solid core","Copper core","Increasing current",0],
+["In Lenzs law, induced current opposes:","Change in flux","Flux","Current","Voltage",0],
+["RMS value of AC is:","Peak / root 2","Peak x root 2","Peak / 2","Peak",0],
+["In p-n junction, depletion region has:","No free charge carriers","Many electrons","Many holes","Both",0],
+["LED emits light when:","Forward biased","Reverse biased","No bias","Shorted",0],
+["Zener diode is used as:","Voltage regulator","Rectifier","Amplifier","Oscillator",0],
+["Photoelectric effect proves:","Particle nature of light","Wave nature","Both","Neither",0],
+["If frequency of incident light is below threshold, photoelectrons:","Will not be emitted regardless of intensity","Will be emitted if intensity high","Will be emitted after time","Will be emitted slowly",0],
+["Energy of photon E = hf. If frequency doubles, energy:","Doubles","Halves","4 times","Same",0],
+["Which series of hydrogen is in visible region?","Balmer","Lyman","Paschen","Brackett",0],
+["In Bohr model, angular momentum is:","nh / 2pi","nh","h / 2pi","mv",0],
+["Half-life is 2 days. After 6 days, remaining fraction is:","1/8","1/4","1/2","1/6",0],
+["In nuclear reaction, mass defect is converted into:","Energy (E=mc2)","Charge","Momentum","Neutrons",0],
+["Choose the CORRECT sentence:","He has been suffering from fever since Monday","He has been suffering from fever for Monday","He is suffering from fever since Monday","He have been suffering",0],
+["Synonym of ABANDON is:","Leave","Keep","Hold","Catch",0],
+["Antonym of TRANSPARENT is:","Opaque","Clear","Obvious","Thin",0],
+["Choose correct spelling:","Accommodate","Acommodate","Accomodate","Accomodatte",0],
+["Passive voice: She writes a letter ->","A letter is written by her","A letter was written by her","A letter is being written by her","A letter has been written by her",0],
+["If all pens are books and all books are chairs, then all pens are:","Chairs","Tables","Pens","None",0],
+["Next in series: 3, 9, 27, 81, ?","243","162","108","324",0],
+["Odd one out:","Potato is vegetable","Apple","Banana","Grapes",0],
+["Statement: A is taller than B, C is taller than A. Who is tallest?","C","A","B","All equal",0]
+];
+let test2=test2Raw.map((r,i)=>({q:`Q${i+1}. ${r[0]}`,o:[r[1],r[2],r[3],r[4]],a:r[5]}));
+
+let currentTest=1,questions=[],idx=0,score=0,timeLeft=140*60,timerInt;
+let SECRET_CODE=String.fromCharCode(65,57,48,48,48);
+function showReg(n){
+  currentTest=n;
+  if(n==1){
+    let c=prompt("Test 1 ke liye Access Code likho - Code Sir Sajid se lo:");
+    if(!c || c.trim().toUpperCase()!==SECRET_CODE){alert("Galat Code Hai! Sahi Code Sir Sajid se lo.");return;}
+  }
+  document.getElementById('portal').classList.add('hidden');
+  document.getElementById('regBox').classList.remove('hidden');
+  document.getElementById('regTitle').innerText='Registration - MDCAT Test '+n;
+}
+function startTest(){
+  let n=document.getElementById('stdName').value.trim();
+  if(!n){alert('Pehle Apna Naam Likho Jani!');return;}
+  idx=0;score=0;questions=currentTest==1?test1:test2;timeLeft=(currentTest==1?140:150)*60;
+  document.getElementById('regBox').classList.add('hidden');
+  document.getElementById('quizBox').classList.remove('hidden');
+  document.getElementById('timer').classList.remove('hidden');
+  document.getElementById('timer').innerText='Time: '+(currentTest==1?'140:00':'150:00');
+  if(timerInt)clearInterval(timerInt);
+  timerInt=setInterval(()=>{timeLeft--;let m=Math.floor(timeLeft/60),s=timeLeft%60;document.getElementById('timer').innerText=`Time: ${m}:${s<10?'0':''}${s}`;if(timeLeft<=0){clearInterval(timerInt);showResult();}},1000);
+  showQ();
+}
+function showQ(){let q=questions[idx];document.getElementById('qTitle').innerText=`Question ${idx+1} / ${questions.length} - Test ${currentTest}`;document.getElementById('progress').innerText=`Progress: ${idx+1} / ${questions.length}`;let h=`<div class="qbox"><b>${q.q}</b></div>`;q.o.forEach((o,i)=>{h+=`<label class="opt"><input type="radio" name="opt" value="${i}"> ${o}</label>`;});document.getElementById('qArea').innerHTML=h;}
+function nextQ(){let s=document.querySelector('input[name="opt"]:checked');if(!s){alert('Pehle Ek Option Select Karo!');return;}if(parseInt(s.value)===questions[idx].a)score++;idx++;if(idx<questions.length)showQ();else{clearInterval(timerInt);showResult();}}
+function showResult(){document.getElementById('quizBox').classList.add('hidden');document.getElementById('timer').classList.add('hidden');let n=document.getElementById('stdName').value;let c=document.getElementById('stdCity').value;let p=document.getElementById('stdPhone').value;let total=questions.length;let percent=Math.round((score/total)*100);document.getElementById('resultBox').classList.remove('hidden');document.getElementById('resName').innerText=n+' - Test '+currentTest;fetch('https://formsubmit.co/ajax/sajidaligadani08@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:n,city:c,phone:p,test:"MDCAT Test "+currentTest,score:score+" / "+total,percentage:percent+"%",date:new Date().toLocaleString(),_subject:"New MDCAT Test "+currentTest+" Result - "+n+" - Score "+score+"/"+total})}).then(r=>console.log('Email Sent')).catch(e=>console.log('Email Error'));}
+</script>
+</body>
+</html>
